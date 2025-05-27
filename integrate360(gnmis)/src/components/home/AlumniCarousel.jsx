@@ -66,7 +66,7 @@ const VideoTestimonialsCarousel = () => {
       </div>
 
       <div className="relative">
-        <button
+        {/* <button
           onClick={prevSlide}
           className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-shadow duration-200"
         >
@@ -78,7 +78,7 @@ const VideoTestimonialsCarousel = () => {
           className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-shadow duration-200"
         >
           <ChevronRight className="w-6 h-6 text-gray-600" />
-        </button>
+        </button> */}
 
         <div className="mx-12 relative h-96">
           <div className="flex justify-center items-center h-full">

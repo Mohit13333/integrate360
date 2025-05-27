@@ -52,11 +52,11 @@ const Recruiters = () => {
       <h2 className="text-3xl font-bold text-center text-[#0e3c60] mb-12">
         Our Recruiter
       </h2>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-7 gap-6 justify-items-center">
+      <div className="grid grid-cols-3 md:grid-cols-7 gap-6 justify-items-center">
         {recruiters.map((recruiter, index) => (
           <div
             key={index}
-            className="bg-white rounded-xl shadow-lg p-4 w-40 h-20 flex items-center justify-center hover:shadow-xl transition-shadow duration-300"
+            className="bg-white rounded-xl shadow-lg p-4 w-30 h-16 md:w-40 md:h-20 flex items-center justify-center hover:shadow-xl transition-shadow duration-300"
           >
             <img
               src={recruiter.logo}
@@ -67,42 +67,42 @@ const Recruiters = () => {
         ))}
       </div>
     </section>
-    <section className="bg-[#FFFFF] py-16 px-4 text-white">
-      <h2 className="text-3xl font-bold text-center text-[#0e3c60] mb-12">
-        Highest Package
-      </h2>
-      <div className="flex flex-wrap justify-center gap-6">
-        {students.map((student, idx) => (
-          <div key={idx} className="w-64 rounded-xl bg-[#0d0f12] shadow-md text-center">
-            <img
-              src={student.image}
-              alt={student.name}
-              className="w-full h-64 object-cover rounded-t-xl"
-            />
-            <div className="bg-white text-black p-4 rounded-b-xl">
-              <h3 className="text-xl font-bold text-[#0e3c60]">
-                {student.package}
-              </h3>
-              <hr className="my-2 border-t-2 border-[#0e3c60] w-16 mx-auto" />
-              <p className="text-sm font-semibold">{student.name}</p>
-              <p className="text-sm text-gray-600">
-                Got Hired In {student.company}
-              </p>
-            </div>
-          </div>
-        ))}
+   <section className="bg-[#FFFFF] py-16 px-4 text-white">
+  <h2 className="text-3xl font-bold text-center text-[#0e3c60] mb-12">
+    Highest Package
+  </h2>
+  <div className="flex flex-wrap justify-center gap-4 md:gap-6">
+    {students.map((student, idx) => (
+      <div key={idx} className="w-[calc(50%-0.5rem)] md:w-64 rounded-xl bg-[#0d0f12] shadow-md text-center">
+        <img
+          src={student.image}
+          alt={student.name}
+          className="w-full h-64 object-cover rounded-t-xl"
+        />
+        <div className="bg-white text-black p-4 rounded-b-xl">
+          <h3 className="text-xl font-bold text-[#0e3c60]">
+            {student.package}
+          </h3>
+          <hr className="my-2 border-t-2 border-[#0e3c60] w-16 mx-auto" />
+          <p className="text-sm font-semibold">{student.name}</p>
+          <p className="text-sm text-gray-600">
+            Got Hired In {student.company}
+          </p>
+        </div>
       </div>
+    ))}
+  </div>
 
-      {/* Navigation Arrows */}
-      <div className="flex justify-center items-center mt-10 space-x-4">
-        <button className="w-10 h-10 flex items-center justify-center bg-[#0e3c60] text-white rounded-full hover:bg-[#114a7a]">
-          <ChevronLeft size={20} />
-        </button>
-        <button className="w-10 h-10 flex items-center justify-center bg-[#0e3c60] text-white rounded-full hover:bg-[#114a7a]">
-          <ChevronRight size={20} />
-        </button>
-      </div>
-    </section>
+  {/* Navigation Arrows */}
+  <div className="flex justify-center items-center mt-10 space-x-4">
+    <button className="w-10 h-10 flex items-center justify-center bg-[#0e3c60] text-white rounded-full hover:bg-[#114a7a]">
+      <ChevronLeft size={20} />
+    </button>
+    <button className="w-10 h-10 flex items-center justify-center bg-[#0e3c60] text-white rounded-full hover:bg-[#114a7a]">
+      <ChevronRight size={20} />
+    </button>
+  </div>
+</section>
     </>
   );
 };

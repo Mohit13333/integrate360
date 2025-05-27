@@ -13,7 +13,7 @@ import EventsSection from '../components/home/EventSection'
 
 const HomePage = () => {
     return (
-        <div>
+        <div className="w-full overflow-x-hidden">
             <AdmissionsBanner />
             <Navbar />
             <ImgLayout />

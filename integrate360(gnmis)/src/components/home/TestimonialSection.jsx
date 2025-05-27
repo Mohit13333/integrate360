@@ -38,7 +38,7 @@ const TestimonialSection = () => {
 
             {/* Content container */}
             <div className="relative z-10 container mx-auto px-4 py-10">
-                <h2 className="text-4xl font-semibold mb-10 text-white">Testimonials</h2>
+                <h2 className="text-[20px] md:text-4xl  font-semibold mb-10 text-white">Testimonials</h2>
 
                 <div className="flex space-x-4 overflow-x-auto pb-4">
                     {testimonials.map((t, i) => (
