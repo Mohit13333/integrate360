@@ -7,7 +7,7 @@ const testimonials = [
         company: "Lagu Bandhu Jewellers",
         message:
             "This is Prathamesh Mahagaonkar from batch MMS 2016-18. Currently I am working at Lagu Bandhu Jewellers as a Brand and Media manager. Gnims business school has been the cornerstone of,",
-        image: "https://randomuser.me/api/portraits/men/32.jpg",
+        image: "/user1.png",
     },
     {
         name: "Rutuja Patil",
@@ -15,7 +15,7 @@ const testimonials = [
         company: "SSN and C Technologies Inc",
         message:
             "Hello this is Rutuja Patil from batch 2016-18. Currently I am working at SSN and C Technologies Inc as a Senior Associate. I am proud to say that the teaching quality was very good at GNIMS.",
-        image: "https://randomuser.me/api/portraits/women/32.jpg",
+        image: "/user2.png",
     },
     {
         name: "Pooja Sharma",
@@ -23,24 +23,23 @@ const testimonials = [
         company: "IPSA Pvt Ltd",
         message:
             "This is Pooja Sharma from batch 2016-18. Currently I am running my own business. I am proud to say that the experience at GNIMS was exceptional, providing me with a strong foundation.",
-        image: "https://randomuser.me/api/portraits/women/65.jpg",
+        image: "/user3.png",
     },
 ];
 
 const TestimonialSection = () => {
     return (
         <div className="relative w-full mb-40">
-            {/* Background containers */}
             <div className="absolute inset-0 flex">
-                <div className="w-1/2 bg-[#D3413F]"></div>
+                <div className="w-1/2 bg-[#D3413F] rounded-tr-xl rounded-br-xl"></div>
                 <div className="w-1/2 bg-white"></div>
             </div>
 
             {/* Content container */}
-            <div className="relative z-10 container mx-auto px-4 py-10">
-                <h2 className="text-[20px] md:text-4xl  font-semibold mb-10 text-white">Testimonials</h2>
+            <div className="relative z-10 container mx-auto px-4 py-14">
+                <h2 className="text-[20px] md:text-4xl lg:ml-30 font-semibold mb-10 text-white">Testimonials</h2>
 
-                <div className="flex space-x-4 overflow-x-auto pb-4">
+                <div className="flex space-x-20 lg:ml-30 pb-4 relative">
                     {testimonials.map((t, i) => (
                         <div
                             key={i}
@@ -61,21 +60,22 @@ const TestimonialSection = () => {
                             </div>
                             <p className="text-sm">
                                 {t.message}{" "}
-                                <span className="text-red-600 font-semibold cursor-pointer">
+                                <span className="text-[#D3413F] font-semibold cursor-pointer">
                                     Read More....
                                 </span>
                             </p>
                         </div>
                     ))}
+
+                    <div className="absolute left-0 bottom-0 flex space-x-4 transform translate-y-full mt-2">
+                        <button className="w-10 h-10 rounded-full border border-white text-white text-lg">
+                            <img src="/leftar.png" alt="" />
+                        </button>
+                        <button className="w-10 h-10 rounded-full border border-white text-white text-lg">
+                            <img src="/rightar.png" alt="" />
+                        </button>
+                    </div>
                 </div>
-            </div>
-            <div className="flex-shrink-0 flex flex-col justify-center items-center space-y-4 pl-4">
-                <button className="w-10 h-10 rounded-full border border-white text-white text-lg">
-                    &lt;
-                </button>
-                <button className="w-10 h-10 rounded-full border border-white text-white text-lg">
-                    &gt;
-                </button>
             </div>
         </div>
     );

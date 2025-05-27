@@ -21,7 +21,7 @@ const EventsSection = () => {
     <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
         Events
     </h2>
-    <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+    <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 gap-8">
         {events.map((event, idx) => (
             <div
                 key={idx}
