@@ -1,6 +1,6 @@
 import React from 'react'
 import AdmissionsBanner from '../components/layouts/AdmissionsBanner'
-import Navbar from '../components/layouts/navbar'
+import Navbar from '../components/layouts/Navbar'
 import ImgLayout from '../components/home/ImgLayout'
 import About from '../components/home/About'
 import Footer from '../components/layouts/Footer'
