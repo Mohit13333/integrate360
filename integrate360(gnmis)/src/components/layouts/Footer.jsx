@@ -31,10 +31,21 @@ const Footer = () => {
                         established in 2002 as a part of Shiromani
                     </p>
                     <div className="flex gap-4 mt-4 text-white text-xl">
-                        <i className="fab fa-facebook"></i>
-                        <i className="fab fa-x-twitter"></i>
-                        <i className="fab fa-linkedin"></i>
-                        <i className="fab fa-instagram"></i>
+                        <div className="flex space-x-4">
+                            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                                <img src="/facebook.png" alt="Facebook" className="w-4 h-4" />
+                            </a>
+                            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                                <img src="/twitter.png" alt="Twitter" className="w-4 h-4" />
+                            </a>
+                            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                                <img src="/linkedin.png" alt="LinkedIn" className="w-4 h-4" />
+                            </a>
+                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                                <img src="/instagram.png" alt="Instagram" className="w-4 h-4" />
+                            </a>
+                        </div>
+
                     </div>
                 </div>
 
