@@ -29,27 +29,29 @@ const testimonials = [
 
 const TestimonialSection = () => {
     return (
-        <div className="relative w-full mb-40">
-            <div className="absolute inset-0 flex">
+        <div className="relative w-full mt-20 mb-10 md:mb-40">
+            <div className="absolute inset-0 flex md:h-[120%] -top-10"> {/* Increased height here */}
                 <div className="w-1/2 bg-[#D3413F] rounded-tr-xl rounded-br-xl"></div>
                 <div className="w-1/2 bg-white"></div>
             </div>
 
             {/* Content container */}
-            <div className="relative z-10 container mx-auto px-4 py-14">
-                <h2 className="text-[20px] md:text-4xl lg:ml-30 font-semibold mb-10 text-white">Testimonials</h2>
+            <div className="relative z-1 mx-2 px-4 py-14">
+                <h2 className="text-[20px] md:text-4xl lg:ml-30 font-semibold mb-28 text-white">Testimonials</h2>
 
-                <div className="flex space-x-20 lg:ml-30 pb-4 relative">
+                <div className="flex gap-30 lg:ml-30 pb-4 relative">
                     {testimonials.map((t, i) => (
                         <div
                             key={i}
-                            className="flex-shrink-0 bg-white text-black rounded-xl shadow-md p-6 w-full max-w-md border"
+                            className={`flex-shrink-0 bg-white text-black rounded-xl shadow-md p-6 border transition-all duration-300 ${i === 0 ? "md:scale-y-125 text-sm w-[350px] md:w-[420px] z-10" : "w-full max-w-md"
+                                }`}
                         >
                             <div className="flex items-center space-x-4 mb-4">
                                 <img
                                     src={t.image}
                                     alt={t.name}
-                                    className="w-12 h-12 rounded-full border-2 border-yellow-400"
+                                    className={`rounded-full ${i === 0 ? "w-14 h-11" : "w-12 h-12 "
+                                }`}
                                 />
                                 <div>
                                     <h3 className="font-semibold">{t.name}</h3>
@@ -67,14 +69,15 @@ const TestimonialSection = () => {
                         </div>
                     ))}
 
-                    <div className="absolute left-0 bottom-0 flex space-x-4 transform translate-y-full mt-2">
-                        <button className="w-10 h-10 rounded-full border border-white text-white text-lg">
-                            <img src="/leftar.png" alt="" />
-                        </button>
-                        <button className="w-10 h-10 rounded-full border border-white text-white text-lg">
-                            <img src="/rightar.png" alt="" />
-                        </button>
-                    </div>
+                </div>
+                
+                <div className="flex space-x-4 lg:ml-30 mt-16">
+                    <button className="w-14 h-14 rounded-full text-lg">
+                        <img src="/leftar.png" alt="" className="w-14 h-14" />
+                    </button>
+                    <button className="w-14 h-14 rounded-full text-lg">
+                        <img src="/rightar.png" alt="" className="w-14 h-14" />
+                    </button>
                 </div>
             </div>
         </div>

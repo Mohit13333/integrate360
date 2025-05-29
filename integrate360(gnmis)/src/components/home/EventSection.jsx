@@ -30,11 +30,10 @@ const EventsSection = () => {
                 <img
                     src={event.image}
                     alt={event.name}
-                    className="w-full h-72 object-cover"
+                    className="w-full h-96 object-cover"
                 />
-                {/* Overlay - fixed width removed and responsive margins added */}
-                <div className="absolute bottom-0 left-0 right-0 mx-4 bg-white bg-opacity-50 py-4 mb-4 rounded-lg">
-                    <h3 className="text-lg font-semibold text-[#073763] px-3 text-center">
+                <div className="absolute bottom-0 left-0 right-0 mx-4 bg-white bg-opacity-50 py-6 mb-4 rounded-lg">
+                    <h3 className="text-lg md:text-2xl font-semibold text-[#073763] text-center">
                         {event.name}
                     </h3>
                 </div>
